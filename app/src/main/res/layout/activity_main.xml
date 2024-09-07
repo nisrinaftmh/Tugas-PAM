@@ -8,21 +8,71 @@
     tools:context=".MainActivity">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:id="@+id/linear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:gravity="center"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/textView"
+        <EditText
+            android:id="@+id/nilai1"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:hint="Masukkan Bilangan Pertama"
+            android:inputType="numberDecimal" />
+
+        <EditText
+            android:id="@+id/nilai2"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:hint="Masukkan Bilangan Kedua"
+            android:inputType="numberDecimal" />
+
+        <RadioGroup
+            android:id="@+id/radiobutton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/Nama" />
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/NIM" />
-    </LinearLayout>
+            <RadioButton
+                android:id="@+id/radiotambah"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint= "+"
+                android:textSize="25sp"/>
+
+            <RadioButton
+                android:id="@+id/radiokurang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint= "-"
+                android:textSize="25sp"/>
+
+            <RadioButton
+                android:id="@+id/radiokali"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint= "x"
+                android:textSize="25sp"/>
+
+            <RadioButton
+                android:id="@+id/radiobagi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint= "/"
+                android:textSize="25sp"/>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/buttonHitung"
+        android:layout_width="222dp"
+        android:layout_height="wrap_content"
+        android:text="Hitung" />
+
+</LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
